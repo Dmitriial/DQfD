@@ -156,7 +156,7 @@ def get_demo_data(env):
         e += 1
 
     with open(Config.DEMO_DATA_PATH, 'wb') as f:
-        pickle.dump(agent.demo_buffer, f, protocol=2)
+        pickle.dump(agent.demo_buffer, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 if __name__ == '__main__':
